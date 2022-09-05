@@ -1,11 +1,11 @@
   applications:
-  - name: onlinecourse
+  - name: bhumbla-onlinecourse
     routes:
-      - route: host.domain
+      - route: bhumbla-onlinecourse.us-south.cf.appdomain.cloud
     memory: 128M
     buildpack: python_buildpack
-  - name: onlinecourse-nginx
+  - name: bhumbla-onlinecourse-nginx
     routes:
-      - route: host.domain/static
+      - route: https://bhumbla-onlinecourse.us-south.cf.appdomain.cloud/static
     memory: 128M
     buildpack: staticfile_buildpack
