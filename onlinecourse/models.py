@@ -120,6 +120,9 @@ class Question(models.Model):
        else:
            return False
 
+    def points_for_question(self):
+        correct_answers = self.choice_set.filter(is_correct=True).count()
+        return self.grade * correct_answers
 
 #  <HINT> Create a Choice Model with:
     # Used to persist choice content for a question
